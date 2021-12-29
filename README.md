@@ -1,3 +1,3 @@
 ## Hi, there!
 
-I'm focused on the UI to provide a fast, slick, and resilient user experience based on React and Shopify.
+I'm focused on the UI to provide a fast, slick, and resilient user experience.
