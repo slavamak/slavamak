@@ -5,13 +5,9 @@ import { urlForImage } from "../../libs/sanity"
 import HeroLinks from "./HeroLinks"
 
 function Hero({ data }) {
-  const {
-    photo,
-    photo: { photo_alt: photoAlt },
-    social_links: links,
-    content,
-  } = data
-  const photoURl = urlForImage(photo).url()
+  const { photo, social_links: links, content } = data
+  const photoURl = photo ? urlForImage(photo).url() : null
+  const photoAlt = photo ? photo.photo_alt : null
 
   const overrides = {
     h1: (props) => (
@@ -40,16 +36,19 @@ function Hero({ data }) {
           <BlockContent blocks={content} serializers={serializers} />
           <HeroLinks links={links} />
         </div>
-        <div className="text-center w-full max-w-md sm:max-w-none sm:w-2/5">
-          <div className="relative flex overflow-hidden w-full rounded-full border-4 border-gray-900 bg-white pb-full shadow-xl dark:border-gray-100">
-            <Image
-              src={photoURl}
-              alt={photoAlt}
-              objectFit="cover"
-              layout="fill"
-            />
+
+        {photo ? (
+          <div className="text-center w-full max-w-md sm:max-w-none sm:w-2/5">
+            <div className="relative flex overflow-hidden w-full rounded-full border-4 border-gray-900 bg-white pb-full shadow-xl dark:border-gray-100">
+              <Image
+                src={photoURl}
+                alt={photoAlt}
+                objectFit="cover"
+                layout="fill"
+              />
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   )

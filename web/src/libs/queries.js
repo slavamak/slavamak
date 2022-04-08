@@ -17,7 +17,7 @@ export const modulesQuery = `
     _key,
     content[],
     social_links[],
-    photo[]
+    photo
   },
   _type == 'collection' => {
     _type,
