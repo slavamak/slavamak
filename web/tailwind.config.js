@@ -4,13 +4,7 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  purge: {
-    enabled: true,
-    content: ["./src/components/**/*.{js,jsx}", "./src/pages/**/*.{js,jsx}"],
-    options: {
-      safelist: [],
-    },
-  },
+  content: ["./src/components/**/*.{js,jsx}", "./src/pages/**/*.{js,jsx}"],
   darkMode: "class",
   theme: {
     colors: {
@@ -19,7 +13,7 @@ module.exports = {
       inherit: "inherit",
       black: colors.black,
       white: colors.white,
-      gray: colors.trueGray,
+      gray: colors.neutral,
       yellow: colors.amber,
     },
     screens: {
@@ -71,6 +65,4 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [],
 }
