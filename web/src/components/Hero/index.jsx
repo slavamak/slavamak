@@ -45,6 +45,7 @@ function Hero({ data }) {
                 alt={photoAlt}
                 objectFit="cover"
                 layout="fill"
+                priority
               />
             </div>
           </div>
