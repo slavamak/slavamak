@@ -28,7 +28,14 @@ export const Favicon = component$(() => {
     $(() => (hidden.value = document.hidden))
   )
 
-  return <link rel="icon" href={favicon.value} type="image/svg+xml" />
+  return (
+    <>
+      <link rel="icon" href={favicon.value} type="image/svg+xml" />
+      <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+      <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    </>
+  )
 })
 
 export const RouterHead = component$(() => {
@@ -42,7 +49,6 @@ export const RouterHead = component$(() => {
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <Favicon />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
