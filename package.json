@@ -33,7 +33,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": "pnpm lint.scripts",
-    "*.{css}": "pnpm lint.styles",
+    "*.css": "pnpm lint.styles",
     "*.{ts,tsx,css}": "pnpm format"
   },
   "browserslist": {
