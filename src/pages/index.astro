@@ -19,15 +19,9 @@
       content="Independent developer crafting tailored e-commerce solutions and engaging web experiences with a commitment to performance and user-centric design."
     />
     <script>
-      const favicon = document.querySelector(
-        'link[rel="icon"][type="image/svg+xml"]',
-      );
+      const favicon = document.querySelector('link[type="image/svg+xml"]');
       document.addEventListener("visibilitychange", () => {
-        if (document.hidden) {
-          favicon.href = "/favicon-hidden.svg";
-        } else {
-          favicon.href = "/favicon.svg";
-        }
+        favicon.href = document.hidden ? "/favicon-hidden.svg" : "/favicon.svg";
       });
     </script>
   </head>
