@@ -1,7 +1,0 @@
-.link {
-  @apply no-underline transition transition-colors duration-100 hover:text-yellow-400;
-}
-
-:global(.dark) .link {
-  @apply hover:text-gray-200;
-}

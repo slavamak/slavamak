@@ -1,8 +1,0 @@
-@import "tailwindcss/base";
-@import "global/variables.css";
-@import "global/reset.css";
-@import "global/typography.css";
-
-@import "tailwindcss/utilities";
-
-@import "tailwindcss/components";

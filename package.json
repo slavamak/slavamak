@@ -1,6 +1,6 @@
 {
   "name": "slavamak",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "My website",
   "author": "Slava Maksimov <hello@slavamak.com> (https://slavamak.com)",
   "license": "MIT",
@@ -9,46 +9,22 @@
     "type": "git",
     "url": "https://github.com/slavamak/slavamak.git"
   },
+  "type": "module",
   "scripts": {
-    "lint:scripts": "eslint \"**/*.{js,jsx}\" --fix",
-    "lint:styles": "stylelint \"**/*.css\" --fix",
-    "format": "prettier --write .",
-    "prepare": "husky install && husky add .husky/pre-commit \"npx lint-staged\""
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.2.1",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "eslint": "^7.27.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.3",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-prettier": "^1.2.0"
-  },
-  "browserslist": {
-    "production": [
-      "last 2 version",
-      "firefox >= 51",
-      "chrome >= 56",
-      "edge >= 15",
-      "safari >= 9"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "lint-staged": {
-    "*.{js,jsx}": "npm run lint:scripts",
-    "*.{css}": "npm run lint:styles",
-    "*.{js,jsx,css}": "npm run format"
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.13.0",
+    "typescript": "^5.3.3"
   }
 }
