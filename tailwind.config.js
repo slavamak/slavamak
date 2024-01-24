@@ -5,7 +5,6 @@ export default {
   corePlugins: {
     preflight: false,
   },
-  darkMode: "class",
   content: ['./src/**/*.{astro,js,jsx,md,mdx}'],
   theme: {
     colors: {
