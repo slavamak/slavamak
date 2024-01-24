@@ -1,0 +1,131 @@
+@layer base {
+  @font-face {
+    font-family: "Hind";
+    src: url("/fonts/hind-v10-latin-500.woff2") format("woff2"),
+      url("/fonts/hind-v10-latin-500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Hind";
+    src: url("/fonts/hind-v10-latin-700.woff2") format("woff2"),
+      url("/fonts/hind-v10-latin-700.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Hind";
+    src: url("/fonts/hind-v10-latin-regular.woff2") format("woff2"),
+      url("/fonts/hind-v10-latin-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply font-body leading-none bg-white text-black text-base dark:bg-gray-900 dark:text-white;
+  }
+
+  p {
+    @apply m-0 text-base leading-normal;
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  ul {
+    @apply list-none m-0 p-0;
+  }
+
+  h1,
+  .h1 {
+    @apply m-0 text-4xl font-heading font-bold leading-none;
+  }
+
+  h2,
+  .h2 {
+    @apply m-0 text-3xl font-heading font-bold leading-tight;
+  }
+
+  h3,
+  .h3 {
+    @apply m-0 text-2xl font-heading font-bold leading-tight;
+  }
+
+  h4,
+  .h4 {
+    @apply m-0 text-xl font-heading font-bold leading-snug;
+  }
+
+  h5 {
+    @apply m-0 text-lg font-heading font-bold leading-tight;
+  }
+
+  h6 {
+    @apply m-0 text-base font-heading font-bold leading-tight;
+  }
+
+  a {
+    @apply no-underline text-current;
+  }
+
+  button,
+  .button,
+  input[type="button"] {
+    @apply appearance-none no-underline cursor-pointer font-inherit leading-none;
+  }
+
+  figure {
+    @apply relative m-0;
+  }
+
+  hr {
+    @apply my-16 mx-0 border-0 h-px;
+  }
+
+  table {
+    @apply border-collapse;
+
+    td,
+    th {
+      @apply text-center p-6;
+    }
+
+    th {
+      @apply text-white bg-black;
+    }
+
+    td:first-child {
+      @apply text-left font-bold;
+    }
+
+    th:first-child {
+      @apply text-left font-bold;
+    }
+  }
+
+  ::-moz-selection {
+    @apply bg-yellow-100 dark:text-black dark:bg-white;
+  }
+
+  ::selection {
+    @apply bg-yellow-100 dark:text-black dark:bg-white;
+  }
+}

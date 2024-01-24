@@ -1,39 +1,11 @@
 ---
+import Layout from "../layouts/base.astro";
 
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Slava Maksimov | Independent Developer</title>
-    <meta
-      name="description"
-      content="Independent developer crafting tailored e-commerce solutions and engaging web experiences with a commitment to performance and user-centric design."
-    />
-    <script>
-      const favicon = document.querySelector('link[type="image/svg+xml"]');
-      document.addEventListener("visibilitychange", () => {
-        favicon.href = document.hidden ? "/favicon-hidden.svg" : "/favicon.svg";
-      });
-    </script>
-    <noscript>
-      <meta
-        http-equiv="refresh"
-        content="0; URL='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"
-      />
-    </noscript>
-  </head>
-  <body>
-    <h1>Slava Maksimov</h1>
-    <h3>Independed Developer</h3>
-    <p>Current emphasis on e-commerce solutions.</p>
-  </body>
-</html>
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <h1 class="h1 my-8">Slava Maksimov</h1>
+  <h3>Independed Developer</h3>
+  <p class="text-lg text-gray-800 dark:text-gray-300">Current emphasis on e-commerce solutions.</p>
+</Layout>

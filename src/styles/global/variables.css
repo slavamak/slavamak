@@ -1,0 +1,6 @@
+@layer base {
+  :root {
+    --header-height: 90px;
+    --header-height-mobile: 60px;
+  }
+}

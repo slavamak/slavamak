@@ -1,0 +1,43 @@
+---
+import '../styles/index.css'
+
+const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preload" href="/fonts/hind-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/hind-v10-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/hind-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <script>
+      const favicon = document.querySelector('link[type="image/svg+xml"]');
+      document.addEventListener("visibilitychange", () => {
+        favicon.href = document.hidden ? "/favicon-hidden.svg" : "/favicon.svg";
+      });
+    </script>
+    <noscript>
+      <meta
+        http-equiv="refresh"
+        content="0; URL='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"
+      />
+    </noscript>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
